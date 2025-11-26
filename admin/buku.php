@@ -1,17 +1,8 @@
-<?php
-session_start();
-if (!isset($_SESSION['admin'])) {
-    $_SESSION['error'] = "Silakan login terlebih dahulu!";
-    header("Location: /learnphp/admin/index.php");
-    exit;
-}
-include "../main/connect.php";
-?>
-
 <?php include "inc/header.php"; ?>
 <?php include "inc/sidebar.php"; ?>
 <?php include "inc/topbar.php"; ?>
-
+<?php include "../main/connect.php"; ?>
+<?php if (session_status() === PHP_SESSION_NONE) { session_start(); } ?>
 
 <div class="content">
 

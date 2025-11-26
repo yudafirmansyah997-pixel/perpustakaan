@@ -1,13 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['admin'])) {
-    $_SESSION['error'] = "Silakan login terlebih dahulu!";
-    header("Location: /learnphp/admin/index.php");
-    exit;
-}
 include "../main/connect.php";
-
-
 
 // =====================
 // PROSES TAMBAH ADMIN

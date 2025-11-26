@@ -1,3 +1,5 @@
+
+<?php include "../main/connect.php"; ?>
 <?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -5,12 +7,11 @@ if (session_status() === PHP_SESSION_NONE) {
 
 if (!isset($_SESSION['admin'])) {
     $_SESSION['error'] = "Silakan login terlebih dahulu!";
-    header("Location: ../admin/index.php");
+    header("Location: /learnphp/admin/index.php");
     exit;
 }
-
-include "../main/connect.php";
 ?>
+
 
 
 
